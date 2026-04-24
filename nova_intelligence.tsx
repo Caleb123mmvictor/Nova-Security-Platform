@@ -24,7 +24,7 @@ model.fit(df)
 df['Result'] = model.predict(df[['Packet_Size', 'Frequency']])
 
     # --- STEP 4: Visualizing for the Team ---
-plt.style('dark_background')            
+plt.style.use('dark_background')            
 plt.figure(figsize=(10, 6))
 colors = {1: 'blue', -1: 'red'}
 plt.scatter(df['Packet_Size'], df['Frequency'], 
